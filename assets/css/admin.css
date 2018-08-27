@@ -1,0 +1,40 @@
+.crwsjp-tax-fieldbox label,
+#crwsjp_data_stock_setting label,
+#crwsjp_data_billing_address_setting label,
+#crwsjp_data_shipping_address_setting label{
+  padding-right: 15px;
+}
+.crwsjp-tax-fieldbox {
+  padding-top: 15px;
+}
+
+.crwsjp-tax-fieldbox span.crwsjp-tax-title,
+#crwsjp_data_stock_setting span.crwsjp-stock-title{
+  font-weight: 700;
+  padding-bottom: 8px;
+  display: block;
+}
+#crwsjp_data_stock_setting .crwsjp-stock-fieldbox{
+  padding-bottom: 10px;
+}
+#crwsjp_data_taxrate{
+  width: 50px;
+}
+
+.validation_set{
+  display:none;
+  visibility: hidden;
+}
+.crwsjp-text-error{
+	color:#E30101;
+}
+.crwsjp-form-error{
+	background-color: #FCFAD3!important;
+}
+
+input[type="text"].crwsjp-form-error:focus {
+  outline: 0;
+  -webkit-box-shadow: 0px 0px 1px 1px #FFDCDC;
+  box-shadow: 0px 0px 1px 1px #FFDCDC;
+  border-color:#E30101;
+}
