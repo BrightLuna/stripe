@@ -11,7 +11,7 @@ function crwsjp_register_setting() {
   register_setting( 'crwsjp-toplevel-group', 'crwsjp_denial_payment_page' );
   register_setting( 'crwsjp-toplevel-group', 'crwsjp_algo_key' );
   register_setting( 'crwsjp-toplevel-group', 'crwsjp_algo_value' );
-  register_setting( 'crwsjp-webhook-group', 'crwsjp_webhook_address' );
+  register_setting( 'crwsjp-webhook-group',  'crwsjp_webhook_address' );
 }
 
 function crwsjp_toplevel_page() {

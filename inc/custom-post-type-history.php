@@ -140,6 +140,14 @@ class CRWSJP_CustomCieldsHistoryCLASS {
     );
 
     add_meta_box(
+      'crwsjp_webhook_postid',
+      '決済ページ',
+      array( $this, 'crwsjp_webhook_postid' ),
+      'crwsjp_buy_history',
+      'normal'
+    );
+
+    add_meta_box(
       'crwsjp_webhook_daytime',
       '購入日',
       array( $this, 'crwsjp_webhook_daytime' ),
@@ -155,7 +163,6 @@ class CRWSJP_CustomCieldsHistoryCLASS {
       'normal'
     );
   }
-
 
 
   function crwsjp_webhook_userid() {
@@ -192,6 +199,12 @@ class CRWSJP_CustomCieldsHistoryCLASS {
     global $post;
     $crwsjp_webhook_productcode_esc = esc_html( get_post_meta( $post->ID, 'crwsjp_webhook_productcode', true ) );
     echo '<input type="text" name="crwsjp_webhook_productcode" value="' . $crwsjp_webhook_productcode_esc . '" style="width:100%" />';
+  }
+
+  function crwsjp_webhook_postid() {
+    global $post;
+    $crwsjp_webhook_postid_esc = esc_html( get_post_meta( $post->ID, 'crwsjp_webhook_postid', true ) );
+    echo '<input type="text" name="crwsjp_webhook_postid" value="' . $crwsjp_webhook_postid_esc . '" />';
   }
 
   function crwsjp_webhook_daytime() {
@@ -260,6 +273,14 @@ class CRWSJP_CustomCieldsHistoryCLASS {
       delete_post_meta( $post_id, 'crwsjp_webhook_productcode' );
     }
 
+    //crwsjp_webhook_postid
+    if ( !empty( $_POST[ 'crwsjp_webhook_postid' ] ) ) {
+      $crwsjp_webhook_postid_esc = esc_html( $_POST[ 'crwsjp_webhook_postid' ] );
+      update_post_meta( $post_id, 'crwsjp_webhook_postid', $crwsjp_webhook_postid_esc );
+    } else {
+      delete_post_meta( $post_id, 'crwsjp_webhook_postid' );
+    }
+
     //crwsjp_webhook_daytime
     if ( !empty( $_POST[ 'crwsjp_webhook_daytime' ] ) ) {
       $crwsjp_webhook_daytime_esc = esc_html( $_POST[ 'crwsjp_webhook_daytime' ] );
@@ -296,6 +317,7 @@ function add_posts_history_columns( $columns ) {
   $columns[ 'crwsjp_webhook_amount'        ] = '売上';
   $columns[ 'crwsjp_webhook_stockcount'    ] = '数量';
   $columns[ 'crwsjp_webhook_daytime'       ] = '決済日';
+  $columns[ 'crwsjp_webhook_postid'        ] = '決済ページID';
   $columns[ 'crwsjp_webhook_user'          ] = '購入者・請求先';
   $columns[ 'crwsjp_webhook_receipt_email' ] = 'E-mail';
   return $columns;
@@ -331,6 +353,14 @@ function add_posts_history_columns_row( $column_name, $post_id ) {
       echo 'データなし';
     }else{
       echo get_post_meta($post_id, 'crwsjp_webhook_daytime', true) ;
+    }
+  }
+
+  if ( 'crwsjp_webhook_postid' == $column_name ) {
+   if( get_post_meta($post_id, 'crwsjp_webhook_postid', true) === "" ){
+      echo 'データなし';
+    }else{
+      echo get_post_meta($post_id, 'crwsjp_webhook_postid', true) ;
     }
   }
 

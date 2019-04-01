@@ -497,7 +497,7 @@ class CRWSJP_CustomCieldsCLASS {
 Setting
 ================================================= */
 // 一覧表のカスタマイズ
-function add_posts_columns( $columns ) {
+function add_crwsjp_posts_columns( $columns ) {
   unset($columns['title']); // タイトル
   unset($columns['date']); // 日付
   $columns[ 'title'                     ] = '商品名';
@@ -511,7 +511,7 @@ function add_posts_columns( $columns ) {
   return $columns;
 }
 
-function add_posts_columns_row( $column_name, $post_id ) {
+function add_crwsjp_posts_columns_row( $column_name, $post_id ) {
   // ----------------------------------------------------
   //サムネイル
   if ( 'thumbnail' == $column_name ) {
@@ -557,5 +557,5 @@ function add_posts_columns_row( $column_name, $post_id ) {
   }
 
 }
-add_filter( 'manage_edit-crwsjp_stripe_item_columns', 'add_posts_columns' );
-add_action( 'manage_posts_custom_column', 'add_posts_columns_row', 10, 2 );
+add_filter( 'manage_edit-crwsjp_stripe_item_columns', 'add_crwsjp_posts_columns' );
+add_action( 'manage_posts_custom_column', 'add_crwsjp_posts_columns_row', 10, 2 );

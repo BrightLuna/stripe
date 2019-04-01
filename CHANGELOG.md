@@ -1,4 +1,13 @@
 # Changelog
+## 0.1.7 - 2019-04-01
+* [Revision]            inc/custom-post-type-item.php  [NG:add_posts_columns OK:add_crwsjp_posts_columns][NG:add_posts_columns_row OK:add_crwsjp_posts_columns_row]
+
+## 0.1.6 - 2019-03-17
+* [Support]             Include the settled page ID in the meta.
+* [Revision]            Single Shortcode [ get_the_ID() ]
+* [Revision]            Custom Post Type History [ crwsjp_webhook_postid']
+* [Revision]            Webhook -- Add $webhook_postid
+
 ## 0.1.5 - 2018-08-27
 * [Support]             SuccessPage & FailurePage
 * [Support]             SuccessPage & FailurePage include

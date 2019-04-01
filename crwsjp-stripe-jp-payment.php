@@ -2,7 +2,7 @@
 /*
 Plugin Name: Crebow Stripe JP Payment
 Description: This plugin extends WordPress and allows you to accept credit card payments directly via the Stripe API.This plugin is optimized for Japanese, but people in countries other than Japan can also use it.
-Version: 0.1.5
+Version: 0.1.7
 Plugin URI: https://crebow.info/crwsjp-stripe-jp-payment/
 Author: Tomoya Matsumoto
 Author URI: https://crebow.info/
@@ -11,7 +11,7 @@ Text Domain: crwsjp-stripe-jp-payment
 Domain Path: /languages
 */
 
-define( 'CRWSJP_VERSION', '0.1.5' );
+define( 'CRWSJP_VERSION', '0.1.7' );
 define( 'CRWSJP_NAME', 'Crebow Stripe JP Payment' );
 define( 'CRWSJP_SUPPORT_URL', 'https://crwsjp.info/crwsjp-stripe-jp-payment/' );
 define( 'CRWSJP_REQUIRED_WP_VERSION', '4.9.7' );
@@ -89,6 +89,7 @@ class CRWSJP_PaymentCLASS {
           'itemname'    => $_POST[ 'itemname' ],
           'productcode' => $_POST[ 'productcode' ],
           'itemmpostid' => $_POST[ 'itemmpostid' ],
+          'postid'      => $_POST[ 'postid' ],
           'stockuse'    => $_POST[ 'stockuse' ],
           'stockcount'  => $_POST[ 'stockcount' ],
         );
@@ -299,6 +300,7 @@ class CRWSJP_WEBHOOK_Class {
     $webhook_receipt_email = $json->data->object->receipt_email;
     $webhook_productcode   = $json->data->object->metadata->productcode;
     $webhook_daytime       = $json->data->object->metadata->daytime;
+    $webhook_postid        = $json->data->object->metadata->postid;
     $webhook_amount        = $json->data->object->amount;
     $webhook_status        = $json->data->object->status;
 
@@ -322,6 +324,7 @@ class CRWSJP_WEBHOOK_Class {
         update_post_meta( $post_id, 'crwsjp_webhook_receipt_email', $webhook_receipt_email );
         update_post_meta( $post_id, 'crwsjp_webhook_productcode', $webhook_productcode );
         update_post_meta( $post_id, 'crwsjp_webhook_daytime', $webhook_daytime );
+        update_post_meta( $post_id, 'crwsjp_webhook_postid', $webhook_postid );
         update_post_meta( $post_id, 'crwsjp_webhook_amount', $webhook_amount );
         update_post_meta( $post_id, 'crwsjp_webhook_stockcount', $webhook_stockcount );
       }

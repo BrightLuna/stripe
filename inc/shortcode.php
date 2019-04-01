@@ -102,6 +102,7 @@ class CRWSJP_Shortcode {
       $crwsjp_checkout_return .= '<input type="hidden" name="itemname" value="' . $title . '">';
       $crwsjp_checkout_return .= '<input type="hidden" name="daytime" value="' . date_i18n('Y-m-d H:i:s') . '">';
       $crwsjp_checkout_return .= '<input type="hidden" name="itemmpostid" value="' . $post_ID . '">';
+      $crwsjp_checkout_return .= '<input type="hidden" name="postid" value="' . get_the_ID() . '">';
       $crwsjp_checkout_return .= '<input type="hidden" name="stockuse" value="' . $crwsjp_data_stockuse.'">';
       $crwsjp_checkout_return .= '<input type="hidden" name="stockcount" value="'.$crwsjp_data_stockuse_count.'">';
       $crwsjp_checkout_return .= '<input type="hidden" name="productcode" value="' . $crwsjp_opt_productcode . '">';
@@ -255,6 +256,7 @@ class CRWSJP_Shortcode_stock{
     $crwsjp_checkout_stock_return .= '<input type="hidden" name="currency" value="' . $crwsjp_opt_currency . '">';
     $crwsjp_checkout_stock_return .= '<input type="hidden" name="userid" value="' . $crwsjp_opt_userid . '">';
     $crwsjp_checkout_stock_return .= '<input type="hidden" name="itemname" value="' . $title . '">';
+    $crwsjp_checkout_stock_return .= '<input type="hidden" name="postid" value="' . get_the_ID() . '">';
     $crwsjp_checkout_stock_return .= '<input type="hidden" name="daytime" value="' . date_i18n('Y-m-d H:i:s'). '">';
     $crwsjp_checkout_stock_return .= '<input type="hidden" name="productcode" value="' . $crwsjp_opt_productcode . '">';
     $crwsjp_checkout_stock_return .= '<input type="hidden" name="crwsjp_cookie_post" value="' . $crwsjp_opt_echo_value . '">';
@@ -432,6 +434,7 @@ class CRWSJP_Shortcode_contents {
           $crwsjp_contents_return .= '<input type="hidden" name="currency" value="' . $crwsjp_opt_currency . '">';
           $crwsjp_contents_return .= '<input type="hidden" name="userid" value="' . $crwsjp_opt_userid . '">';
           $crwsjp_contents_return .= '<input type="hidden" name="itemname" value="' . $title . '">';
+          $crwsjp_contents_return .= '<input type="hidden" name="postid" value="' . get_the_ID() . '">';
           $crwsjp_contents_return .= '<input type="hidden" name="daytime" value="' . date_i18n('Y-m-d H:i:s'). '">';
           $crwsjp_contents_return .= '<input type="hidden" name="stockcount" value="'.$crwsjp_data_stockuse_count.'">';
           $crwsjp_contents_return .= '<input type="hidden" name="productcode" value="' . $crwsjp_opt_productcode . '">';
