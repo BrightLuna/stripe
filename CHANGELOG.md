@@ -1,4 +1,7 @@
 # Changelog
+## 0.1.8 - 2019-05-11
+* [Revision]           data-shipping-address false
+
 ## 0.1.7 - 2019-04-01
 * [Revision]            inc/custom-post-type-item.php  [NG:add_posts_columns OK:add_crwsjp_posts_columns][NG:add_posts_columns_row OK:add_crwsjp_posts_columns_row]
 

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Crebow Stripe JP Payment
 Description: This plugin extends WordPress and allows you to accept credit card payments directly via the Stripe API.This plugin is optimized for Japanese, but people in countries other than Japan can also use it.
-Version: 0.1.7
+Version: 0.1.8
 Plugin URI: https://crebow.info/crwsjp-stripe-jp-payment/
 Author: Tomoya Matsumoto
 Author URI: https://crebow.info/
@@ -11,7 +11,7 @@ Text Domain: crwsjp-stripe-jp-payment
 Domain Path: /languages
 */
 
-define( 'CRWSJP_VERSION', '0.1.7' );
+define( 'CRWSJP_VERSION', '0.1.8' );
 define( 'CRWSJP_NAME', 'Crebow Stripe JP Payment' );
 define( 'CRWSJP_SUPPORT_URL', 'https://crwsjp.info/crwsjp-stripe-jp-payment/' );
 define( 'CRWSJP_REQUIRED_WP_VERSION', '4.9.7' );
