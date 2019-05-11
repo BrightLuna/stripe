@@ -165,13 +165,13 @@ class CRWSJP_CustomCieldsCLASS {
     );
 
     //data_shipping_address meta box
-    add_meta_box(
+    /*add_meta_box(
       'crwsjp_data_shipping_address_setting',
       crwsjp_translation_func( 'data_shipping_address_name' ),
       array( $this, 'crwsjp_data_shipping_address_fields' ),
       'crwsjp_stripe_item',
       'side'
-    );
+    );*/
 
     //data_label meta box
     add_meta_box(
@@ -326,7 +326,7 @@ class CRWSJP_CustomCieldsCLASS {
   }
 
   // data-shipping-address
-  function crwsjp_data_shipping_address_fields() {
+  /*function crwsjp_data_shipping_address_fields() {
     global $post;
     if ( 'true' === get_post_meta( $post->ID, 'crwsjp_data_shipping_address', true ) ) {
       echo '<label><input type="radio" name="crwsjp_data_shipping_address" value="true" checked="checked">' . crwsjp_translation_func( 'flag_valid' ). '</label>';
@@ -335,7 +335,7 @@ class CRWSJP_CustomCieldsCLASS {
       echo '<label><input type="radio" name="crwsjp_data_shipping_address" value="true" >' . crwsjp_translation_func( 'flag_valid' ). '</label>';
       echo '<label><input type="radio" name="crwsjp_data_shipping_address" value="false" checked="checked">' . crwsjp_translation_func( 'flag_invalid' ). '</label>';
     }
-  }
+  }*/
 
   // data-label
   function crwsjp_data_label_fields() {
@@ -463,11 +463,11 @@ class CRWSJP_CustomCieldsCLASS {
     }
 
     //data-shipping-address
-    if ( !empty( $_POST[ 'crwsjp_data_shipping_address' ] ) ) {
+  /*if ( !empty( $_POST[ 'crwsjp_data_shipping_address' ] ) ) {
       update_post_meta( $post_id, 'crwsjp_data_shipping_address', $_POST[ 'crwsjp_data_shipping_address' ] );
     } else {
       delete_post_meta( $post_id, 'crwsjp_data_shipping_address' );
-    }
+    }*/
 
     //data-label
     if ( !empty( $_POST[ 'crwsjp_data_label' ] ) ) {

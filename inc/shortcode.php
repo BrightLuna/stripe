@@ -91,7 +91,8 @@ class CRWSJP_Shortcode {
       $crwsjp_checkout_return .= 'data-billing-address ="' . $crwsjp_opt_billing_address . '"';
       $crwsjp_checkout_return .= 'data-currency ="' . $crwsjp_opt_currency . '"';
       $crwsjp_checkout_return .= 'data-panel-label ="' . $crwsjp_opt_panel_label . '"';
-      $crwsjp_checkout_return .= 'data-shipping-address ="' . $crwsjp_opt_shipping_address . '"';
+      //$crwsjp_checkout_return .= 'data-shipping-address ="' . $crwsjp_opt_shipping_address . '"';
+      $crwsjp_checkout_return .= 'data-shipping-address ="false"';
       $crwsjp_checkout_return .= 'data-label ="' . $crwsjp_opt_label . '"';
       $crwsjp_checkout_return .= 'data-allow-remember-me ="' . $crwsjp_opt_allow_remember_me . '">';
       $crwsjp_checkout_return .= '</script>';
@@ -247,7 +248,7 @@ class CRWSJP_Shortcode_stock{
     $crwsjp_checkout_stock_return .= 'data-billing-address ="' . $crwsjp_opt_billing_address . '"';
     $crwsjp_checkout_stock_return .= 'data-currency ="' . $crwsjp_opt_currency . '"';
     $crwsjp_checkout_stock_return .= 'data-panel-label ="' . $crwsjp_opt_panel_label . '"';
-    $crwsjp_checkout_stock_return .= 'data-shipping-address ="' . $crwsjp_opt_shipping_address . '"';
+    $crwsjp_checkout_stock_return .= 'data-shipping-address ="false"';
     $crwsjp_checkout_stock_return .= 'data-label ="' . $crwsjp_opt_label . '"';
     $crwsjp_checkout_stock_return .= 'data-allow-remember-me ="' . $crwsjp_opt_allow_remember_me . '">';
     $crwsjp_checkout_stock_return .= '</script>';
@@ -425,7 +426,7 @@ class CRWSJP_Shortcode_contents {
           $crwsjp_contents_return .= 'data-billing-address ="' . $crwsjp_opt_billing_address . '"';
           $crwsjp_contents_return .= 'data-currency ="' . $crwsjp_opt_currency . '"';
           $crwsjp_contents_return .= 'data-panel-label ="' . $crwsjp_opt_panel_label . '"';
-          $crwsjp_contents_return .= 'data-shipping-address ="' . $crwsjp_opt_shipping_address . '"';
+          $crwsjp_contents_return .= 'data-shipping-address ="false"';
           $crwsjp_contents_return .= 'data-label ="' . $crwsjp_opt_label . '"';
           $crwsjp_contents_return .= 'data-allow-remember-me ="' . $crwsjp_opt_allow_remember_me . '">';
           $crwsjp_contents_return .= '</script>';
