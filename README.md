@@ -16,8 +16,6 @@
 
 購入ボタン表示します `[crwsjp_checkout id="アイテムID"]`
 
-複数購入機能 `[crwsjp_checkout_stock id="アイテムID"]`
-
 
 ### Webhookがご利用可能なサーバー
 在庫管理が可能や複数購入の機能をご利用いただけます。
