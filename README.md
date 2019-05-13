@@ -37,7 +37,8 @@ Webhookがご利用できない環境では在庫機能とコンテンツ機能�
 * 0.1.8から物販用にはテーマ自体のカスタマイズが必要になりました。
 * 使用方法についてはRREADMEに記述されているものをご参照ください。
 
-当プラグインに関するご質問等につきましては開発費用の捻出の為マニュアルのご購入をお願いしております。
+2019年5月12日にワークショップを開催しました。使用方法は下記のURLの資料もご参照ください。
+https://speakerdeck.com/crebowinfo/sheng-shou-niqian-zuo-wordpressdeke-jin-woyatutemiyou
 
 
 
