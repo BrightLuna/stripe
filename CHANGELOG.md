@@ -1,4 +1,7 @@
 # Changelog
+## 2020-05-16
+* Development end
+
 ## 0.1.8 - 2019-05-11
 * [Revision]           data-shipping-address false
 
